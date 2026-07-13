@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schengen Mallu, Visa Eligibility Checker</title>
+<meta name="description" content="Free visa eligibility checker for Schengen, Turkey e-Visa, and Dubai/UAE applications from Schengen Mallu. Find out what you need in minutes.">
+<link rel="canonical" href="https://schengenmallu.com/eligibility-checker.html">
+<meta property="og:site_name" content="Schengen Mallu">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Visa Eligibility Checker, Schengen Mallu">
+<meta property="og:description" content="Free visa eligibility checker for Schengen, Turkey e-Visa, and Dubai/UAE applications from Schengen Mallu. Find out what you need in minutes.">
+<meta property="og:url" content="https://schengenmallu.com/eligibility-checker.html">
+<meta property="og:image" content="https://schengenmallu.com/assets/schengen-mallu-logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Visa Eligibility Checker, Schengen Mallu">
+<meta name="twitter:description" content="Free visa eligibility checker for Schengen, Turkey e-Visa, and Dubai/UAE applications from Schengen Mallu.">
+<meta name="twitter:image" content="https://schengenmallu.com/assets/schengen-mallu-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,400;0,8..30,500;0,8..30,600;0,8..30,700;1,8..30,400;1,8..30,500;1,8..30,600&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0D2547;--navy-2:#14366A;--navy-deep:#081A36;--dark:#060F1E;
+  --sky:#4C93D9;--skd:#2B6DB2;--sks:#8FC0EE;--skt:#E8F2FC;--teal:#2CB5A0;
+  --gold:#E8B44D;--gold-d:#C0922A;
+  --sn:#96ABC8;--ln:rgba(255,255,255,.11);
+  --ease:cubic-bezier(.19,1,.22,1);
+  --gs:linear-gradient(135deg,#4C93D9,#2CB5A0);
+  --gg:linear-gradient(135deg,#E8B44D,#C0922A);
+  --bad:#E8746B;--good:#4ADE80;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Sora',sans-serif;background:var(--dark);color:#EAF1FA;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{color:var(--sks);text-decoration:none;}
+a:hover{color:#fff;}
+.full{max-width:900px;margin:0 auto;padding:0 40px;}
+@media(max-width:768px){.full{padding:0 20px;}}
+
+header{position:sticky;top:0;z-index:100;background:rgba(6,15,30,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--ln);}
+header nav{display:flex;align-items:center;justify-content:space-between;padding:15px 40px;max-width:900px;margin:0 auto;gap:16px;}
+@media(max-width:768px){header nav{padding:14px 20px;}}
+.logo{font-family:'Piazzolla';font-size:18px;font-weight:500;color:#fff;}
+.logo em{color:var(--sks);font-style:italic;}
+.back-link{display:inline-flex;align-items:center;gap:7px;font-family:'JetBrains Mono';font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;white-space:nowrap;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.35);padding:9px 16px;border-radius:24px;transition:background .3s var(--ease),border-color .3s,transform .3s var(--ease),box-shadow .3s;}
+.back-link:hover{color:#fff;background:var(--gs);border-color:transparent;transform:translateY(-2px);box-shadow:0 12px 26px rgba(76,147,217,.35);}
+
+/* hero */
+.ec-hero{position:relative;padding:64px 0 40px;text-align:center;overflow:hidden;}
+.ec-hero::before{content:"";position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:90vw;height:70vw;max-width:900px;max-height:600px;border-radius:50%;background:radial-gradient(circle,rgba(76,147,217,.18),rgba(44,181,160,.07) 45%,transparent 70%);pointer-events:none;}
+.ec-eyebrow{position:relative;z-index:1;display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:6px 14px;border-radius:20px;font-family:'JetBrains Mono';font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--sks);margin-bottom:18px;}
+.ec-hero h1{position:relative;z-index:1;font-family:'Piazzolla';font-weight:500;font-size:clamp(30px,4.6vw,46px);color:#fff;line-height:1.1;margin-bottom:14px;}
+.ec-hero h1 em{font-style:italic;color:var(--sks);}
+.ec-hero p{position:relative;z-index:1;font-size:15px;color:var(--sn);max-width:52ch;margin:0 auto;}
+
+/* form shell */
+.ec-form-wrap{padding:12px 0 90px;}
+.ec-card{background:linear-gradient(165deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid var(--ln);border-radius:22px;padding:38px clamp(20px,4vw,44px) 42px;box-shadow:0 40px 100px rgba(0,0,0,.35);}
+.ec-progress{display:flex;align-items:center;gap:8px;margin-bottom:34px;}
+.ec-progress-bar{flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,.08);overflow:hidden;}
+.ec-progress-fill{height:100%;width:0%;background:var(--gs);border-radius:3px;transition:width .5s var(--ease);}
+.ec-progress-label{font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--sks);white-space:nowrap;}
+
+.ec-section{margin-bottom:34px;}
+.ec-section:last-of-type{margin-bottom:0;}
+.ec-sec-title{display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono';font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--sks);margin-bottom:18px;}
+.ec-sec-title .num{width:22px;height:22px;border-radius:50%;background:var(--gs);color:#fff;display:flex;align-items:center;justify-content:center;font-size:10.5px;flex-shrink:0;}
+
+.ec-row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:600px){.ec-row2{grid-template-columns:1fr;}}
+.ec-field{margin-bottom:16px;}
+.ec-field label{display:block;font-size:12.5px;font-weight:600;color:#C9D6EA;margin-bottom:7px;}
+.ec-field input,.ec-field select{width:100%;padding:13px 15px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);border-radius:10px;color:#fff;font-family:'Sora',sans-serif;font-size:14px;transition:border-color .25s,background .25s;}
+.ec-field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238FC0EE' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center;padding-right:36px;}
+.ec-field select option{background:#0D2547;color:#fff;}
+.ec-field input::placeholder{color:#6C7F9C;}
+.ec-field input:focus,.ec-field select:focus{outline:none;border-color:#4C93D9;background:rgba(76,147,217,.1);}
+
+/* question block with helper text + yes/no pills */
+.ec-q{background:rgba(255,255,255,.03);border:1px solid var(--ln);border-radius:14px;padding:18px 20px;margin-bottom:14px;}
+.ec-q-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.ec-q-text{flex:1;min-width:220px;}
+.ec-q-text .qt{font-size:14.5px;font-weight:600;color:#fff;line-height:1.4;}
+.ec-q-text .qh{font-size:12px;color:var(--sn);margin-top:4px;}
+.ec-pills{display:flex;gap:8px;flex-shrink:0;}
+.ec-pill{padding:9px 20px;border-radius:20px;border:1.5px solid rgba(255,255,255,.2);background:rgba(255,255,255,.04);color:#C9D6EA;font-size:13px;font-weight:600;cursor:pointer;transition:all .25s var(--ease);white-space:nowrap;}
+.ec-pill:hover{border-color:rgba(255,255,255,.4);}
+.ec-pill.sel-yes{background:var(--good);border-color:var(--good);color:#06331B;}
+.ec-pill.sel-no{background:var(--bad);border-color:var(--bad);color:#3A0E0A;}
+
+.ec-other-wrap{display:none;margin-top:14px;}
+.ec-other-wrap.show{display:block;}
+
+.ec-submit{width:100%;margin-top:8px;padding:16px;border:none;border-radius:12px;background:var(--gs);color:#fff;font-weight:700;font-size:15px;cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s;letter-spacing:.01em;}
+.ec-submit:hover{transform:translateY(-2px);box-shadow:0 20px 44px rgba(76,147,217,.4);}
+.ec-submit:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none;}
+.ec-micro{margin-top:14px;text-align:center;font-size:11px;color:#7E93B8;font-family:'JetBrains Mono',monospace;letter-spacing:.03em;}
+.ec-err{color:var(--bad);font-size:12px;margin-top:10px;text-align:center;display:none;}
+.ec-err.show{display:block;}
+
+/* result panel */
+.ec-result{display:none;}
+.ec-result.show{display:block;animation:ecIn .5s var(--ease);}
+@keyframes ecIn{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+.ec-form-body.hide{display:none;}
+.ec-result-head{text-align:center;margin-bottom:28px;}
+.ec-result-badge{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 18px;animation:ecPop .55s var(--ease);}
+@keyframes ecPop{from{transform:scale(.5);opacity:0;}to{transform:scale(1);opacity:1;}}
+.ec-result-badge.good{background:rgba(74,222,128,.14);border:1px solid rgba(74,222,128,.4);color:var(--good);}
+.ec-result-badge.warn{background:rgba(232,180,77,.14);border:1px solid rgba(232,180,77,.45);color:var(--gold);}
+.ec-result-head h2{font-family:'Piazzolla';font-size:clamp(22px,3vw,28px);font-weight:500;color:#fff;margin-bottom:8px;}
+.ec-result-head p{font-size:14px;color:var(--sn);max-width:48ch;margin:0 auto;line-height:1.6;}
+.ec-result-list{display:flex;flex-direction:column;gap:10px;margin:26px 0 30px;}
+.ec-ri{display:flex;align-items:center;gap:12px;padding:13px 16px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--ln);}
+.ec-ri .ri-ic{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
+.ec-ri.ok .ri-ic{background:rgba(74,222,128,.15);color:var(--good);}
+.ec-ri.flag .ri-ic{background:rgba(232,180,77,.15);color:var(--gold);}
+.ec-ri .ri-txt{font-size:13.5px;color:#D5E0F2;line-height:1.4;}
+.ec-ri .ri-txt b{color:#fff;}
+.ec-result-ctas{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
+.ec-btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:13.5px;padding:13px 24px;border-radius:10px;transition:transform .3s var(--ease),box-shadow .3s;white-space:nowrap;}
+.ec-btn-wa{background:#25D366;color:#fff;}
+.ec-btn-wa:hover{color:#fff;transform:translateY(-2px);box-shadow:0 16px 34px rgba(37,211,102,.35);}
+.ec-btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35);}
+.ec-btn-outline:hover{color:#fff;background:rgba(255,255,255,.1);border-color:#fff;transform:translateY(-2px);}
+.ec-retake{display:block;text-align:center;margin-top:22px;font-size:12.5px;color:var(--sks);cursor:pointer;}
+.ec-retake:hover{color:#fff;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="/" class="logo" style="display:flex;align-items:center;"><img src="assets/schengen-mallu-logo.png" alt="Schengen Mallu" style="height:40px;width:auto;display:block;"></a>
+    <a href="/" class="back-link">← All destinations</a>
+  </nav>
+</header>
+
+<section class="ec-hero">
+  <div class="full">
+    <div class="ec-eyebrow">✓ 2-minute self check</div>
+    <h1>Are you <em>eligible</em> for a Schengen visa?</h1>
+    <p>Answer a few honest questions about your passport, funds and status, we'll tell you exactly where you stand, no strings attached.</p>
+  </div>
+</section>
+
+<section class="ec-form-wrap">
+  <div class="full">
+    <div class="ec-card">
+
+      <div class="ec-form-body" id="ecFormBody">
+        <div class="ec-progress">
+          <div class="ec-progress-bar"><div class="ec-progress-fill" id="ecProgressFill"></div></div>
+          <div class="ec-progress-label" id="ecProgressLabel">0 / 7 answered</div>
+        </div>
+
+        <form id="ecForm">
+          <!-- Contact -->
+          <div class="ec-section">
+            <div class="ec-sec-title"><span class="num">1</span>Your details</div>
+            <div class="ec-row2">
+              <div class="ec-field"><label>Full name</label><input type="text" name="name" placeholder="Your name" required data-track></div>
+              <div class="ec-field"><label>Contact number</label><input type="tel" name="phone" placeholder="+44 7…" required data-track></div>
+            </div>
+            <div class="ec-field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required data-track></div>
+            <label style="display:flex;align-items:flex-start;gap:10px;margin-top:14px;font-size:12.5px;color:#AEC0D9;line-height:1.5;cursor:pointer;"><input type="checkbox" id="ecConsent" required style="margin-top:3px;flex-shrink:0;width:16px;height:16px;accent-color:var(--sks);">I agree to let the Schengen Mallu team contact me and send updates about my enquiry.</label>
+          </div>
+
+          <!-- Eligibility questions -->
+          <div class="ec-section">
+            <div class="ec-sec-title"><span class="num">2</span>Passport &amp; visa status</div>
+
+            <div class="ec-q" data-q="passport">
+              <div class="ec-q-top">
+                <div class="ec-q-text"><div class="qt">Is your passport valid for at least 6 months from your travel date?</div><div class="qh">Most Schengen countries require this minimum validity.</div></div>
+                <div class="ec-pills"><button type="button" class="ec-pill" data-val="yes">Yes</button><button type="button" class="ec-pill" data-val="no">No</button></div>
+              </div>
+            </div>
+
+            <div class="ec-q" data-q="evisa">
+              <div class="ec-q-top">
+                <div class="ec-q-text"><div class="qt">Is your UK eVisa/BRP valid for at least 3 months from your travel date?</div><div class="qh">Your UK immigration status needs to comfortably outlast the trip.</div></div>
+                <div class="ec-pills"><button type="button" class="ec-pill" data-val="yes">Yes</button><button type="button" class="ec-pill" data-val="no">No</button></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ec-section">
+            <div class="ec-sec-title"><span class="num">3</span>Financial standing</div>
+
+            <div class="ec-q" data-q="balance">
+              <div class="ec-q-top">
+                <div class="ec-q-text"><div class="qt">Do you have a bank balance of at least £700?</div><div class="qh">Embassies check for sufficient funds to cover the trip.</div></div>
+                <div class="ec-pills"><button type="button" class="ec-pill" data-val="yes">Yes</button><button type="button" class="ec-pill" data-val="no">No</button></div>
+              </div>
+            </div>
+
+            <div class="ec-q" data-q="consistency">
+              <div class="ec-q-top">
+                <div class="ec-q-text"><div class="qt">Has that balance stayed healthy and consistent over the last 3 months?</div><div class="qh">Sudden large deposits just before applying can raise questions.</div></div>
+                <div class="ec-pills"><button type="button" class="ec-pill" data-val="yes">Yes</button><button type="button" class="ec-pill" data-val="no">No</button></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ec-section">
+            <div class="ec-sec-title"><span class="num">4</span>Background</div>
+
+            <div class="ec-q" data-q="rejection">
+              <div class="ec-q-top">
+                <div class="ec-q-text"><div class="qt">Have you had a Schengen (or any) visa rejection before?</div><div class="qh">Either answer is fine here, we just tailor our advice around it.</div></div>
+                <div class="ec-pills"><button type="button" class="ec-pill" data-val="yes">Yes</button><button type="button" class="ec-pill" data-val="no">No</button></div>
+              </div>
+            </div>
+
+            <div class="ec-field">
+              <label>Employment status</label>
+              <select id="ecEmployment" name="employment" required>
+                <option value="">Select one</option>
+                <option value="Employed">Employed</option>
+                <option value="Unemployed">Unemployed</option>
+                <option value="Student">Student</option>
+                <option value="Self-employed">Self-employed</option>
+                <option value="Other">Other</option>
+              </select>
+              <div class="ec-other-wrap" id="ecOtherWrap">
+                <div class="ec-field" style="margin-top:10px;"><label>Please specify</label><input type="text" id="ecOtherSpecify" name="employmentOther" placeholder="Tell us a bit more"></div>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="ec-submit" id="ecSubmit" disabled>Check my eligibility →</button>
+          <div class="ec-err" id="ecErr">Please answer every question and fill in your details first.</div>
+          <div class="ec-micro">This is a guidance check, not a legal decision · Your details go straight to a specialist</div>
+        </form>
+      </div>
+
+      <div class="ec-result" id="ecResult">
+        <div class="ec-result-head">
+          <div class="ec-result-badge" id="ecBadge">✓</div>
+          <h2 id="ecResultTitle">You're in a strong position.</h2>
+          <p id="ecResultSub">Based on your answers, your profile lines up well with what embassies look for.</p>
+        </div>
+        <div class="ec-result-list" id="ecResultList"></div>
+        <div class="ec-expert-banner" id="ecExpertBanner" style="display:none;background:rgba(232,180,77,.1);border:1px solid rgba(232,180,77,.3);border-radius:12px;padding:16px 20px;margin-bottom:24px;text-align:center;font-size:13.5px;color:#D5E0F2;line-height:1.6;">Don't worry, these are common and fixable. <b style="color:#fff;">Reach out to our experts</b> and we'll help you strengthen your application before you apply.</div>
+        <div class="ec-result-ctas">
+          <a href="https://wa.me/447352555500?text=Hi%20Schengen%20Mallu%2C%20I%27d%20like%20to%20know%20more%20about%20my%20visa." target="_blank" rel="noopener" class="ec-btn ec-btn-wa">Chat on WhatsApp →</a>
+          <a href="/" class="ec-btn ec-btn-outline">Explore destinations</a>
+        </div>
+        <div class="ec-retake" id="ecRetake">↺ Retake the check</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  const form = document.getElementById('ecForm');
+  const submitBtn = document.getElementById('ecSubmit');
+  const errBox = document.getElementById('ecErr');
+  const progressFill = document.getElementById('ecProgressFill');
+  const progressLabel = document.getElementById('ecProgressLabel');
+  const employment = document.getElementById('ecEmployment');
+  const otherWrap = document.getElementById('ecOtherWrap');
+  const otherInput = document.getElementById('ecOtherSpecify');
+  const consentBox = document.getElementById('ecConsent');
+  consentBox.addEventListener('change', updateProgress);
+
+  const answers = {};
+
+  // yes/no pills
+  document.querySelectorAll('.ec-q').forEach(q=>{
+    const key = q.getAttribute('data-q');
+    q.querySelectorAll('.ec-pill').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        q.querySelectorAll('.ec-pill').forEach(b=>b.classList.remove('sel-yes','sel-no'));
+        btn.classList.add(btn.getAttribute('data-val')==='yes' ? 'sel-yes' : 'sel-no');
+        answers[key] = btn.getAttribute('data-val');
+        updateProgress();
+      });
+    });
+  });
+
+  employment.addEventListener('change', ()=>{
+    const isOther = employment.value === 'Other';
+    otherWrap.classList.toggle('show', isOther);
+    otherInput.required = isOther;
+    updateProgress();
+  });
+
+  const trackedInputs = [...form.querySelectorAll('input[data-track]')];
+  trackedInputs.forEach(inp=>inp.addEventListener('input', updateProgress));
+  otherInput.addEventListener('input', updateProgress);
+
+  function countAnswered(){
+    let n = 0;
+    trackedInputs.forEach(inp=>{ if(inp.value.trim()) n++; });
+    if(employment.value && employment.value !== 'Other') n++;
+    if(employment.value === 'Other' && otherInput.value.trim()) n++;
+    n += ['passport','evisa','balance','consistency','rejection'].filter(k=>answers[k]).length;
+    return n;
+  }
+  function updateProgress(){
+    const total = trackedInputs.length + 1 + 5; // 3 contact fields + employment(+other) + 5 questions
+    const done = Math.min(total, countAnswered());
+    const pct = Math.min(100, Math.round((done/total)*100));
+    progressFill.style.width = pct + '%';
+    progressLabel.textContent = done + ' / ' + total + ' answered';
+    submitBtn.disabled = !isFormComplete();
+  }
+  function isFormComplete(){
+    const contactOk = trackedInputs.every(inp=>inp.value.trim());
+    const empOk = employment.value && (employment.value !== 'Other' || otherInput.value.trim());
+    const qOk = ['passport','evisa','balance','consistency','rejection'].every(k=>answers[k]);
+    return contactOk && empOk && qOk && consentBox.checked;
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!isFormComplete()){
+      errBox.classList.add('show');
+      return;
+    }
+    errBox.classList.remove('show');
+    showResult();
+  });
+
+  function showResult(){
+    const flags = [];
+    const oks = [];
+
+    if(answers.passport === 'yes') oks.push('Your passport comfortably clears the 6-month validity rule.');
+    else flags.push('Your passport is under 6 months\' validity, worth renewing before you apply.');
+
+    if(answers.evisa === 'yes') oks.push('Your UK eVisa/BRP clears the 3-month validity requirement.');
+    else flags.push('Your UK eVisa/BRP has under 3 months left, this can hold up an application.');
+
+    if(answers.balance === 'yes') oks.push('Your bank balance is at or above the £700 guideline.');
+    else flags.push('Your bank balance sits below £700, a gap embassies tend to flag.');
+
+    if(answers.consistency === 'yes') oks.push('Your funds have stayed steady over the last 3 months, exactly what embassies want to see.');
+    else flags.push('Your balance hasn\'t been consistent over 3 months, large last-minute deposits can raise questions.');
+
+    if(answers.rejection === 'yes') oks.push('A past rejection doesn\'t rule you out, we\'ll help you address it head-on this time.');
+    else oks.push('No previous rejections on record, a clean slate to work with.');
+
+    const empText = employment.value === 'Other' ? (otherInput.value.trim() || 'Other') : employment.value;
+    oks.push('Employment status (' + empText + ') noted, every status is workable with the right documents.');
+
+    const badge = document.getElementById('ecBadge');
+    const title = document.getElementById('ecResultTitle');
+    const sub = document.getElementById('ecResultSub');
+    const list = document.getElementById('ecResultList');
+
+    if(flags.length === 0){
+      badge.className = 'ec-result-badge good';
+      badge.textContent = '✓';
+      title.textContent = 'You\'re in a strong position.';
+      sub.textContent = 'Based on your answers, your profile lines up well with what embassies look for. Let\'s get your appointment moving.';
+    } else {
+      badge.className = 'ec-result-badge warn';
+      badge.textContent = '!';
+      title.textContent = 'A couple of things to firm up first.';
+      sub.textContent = 'Nothing here is a dead end, these are common, fixable gaps. Reach out to our experts and we\'ll help you strengthen your application before you apply.';
+    }
+
+    list.innerHTML = '';
+    document.getElementById('ecExpertBanner').style.display = flags.length ? 'block' : 'none';
+    flags.forEach(txt=>{
+      const div = document.createElement('div');
+      div.className = 'ec-ri flag';
+      div.innerHTML = '<span class="ri-ic">!</span><span class="ri-txt">' + txt + '</span>';
+      list.appendChild(div);
+    });
+    oks.forEach(txt=>{
+      const div = document.createElement('div');
+      div.className = 'ec-ri ok';
+      div.innerHTML = '<span class="ri-ic">✓</span><span class="ri-txt">' + txt + '</span>';
+      list.appendChild(div);
+    });
+
+    document.getElementById('ecFormBody').classList.add('hide');
+    document.getElementById('ecResult').classList.add('show');
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  document.getElementById('ecRetake').addEventListener('click', function(){
+    document.getElementById('ecResult').classList.remove('show');
+    document.getElementById('ecFormBody').classList.remove('hide');
+  });
+
+  updateProgress();
+})();
+</script>
+
+</body>
+</html>

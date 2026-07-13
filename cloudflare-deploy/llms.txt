@@ -1,0 +1,46 @@
+# Schengen Mallu
+
+> UK-based visa specialists helping travellers secure Schengen, Turkey, and UAE/Dubai visa appointments and documentation, with real physical centres in London, Manchester, Edinburgh, and Birmingham.
+
+## Core pages
+- [Homepage](https://schengenmallu.com/): overview of all services and the three service tiers (Essential, Complete, Guaranteed)
+- [Eligibility Checker](https://schengenmallu.com/eligibility-checker.html): free tool to check visa eligibility
+
+## Destinations
+- [France](https://schengenmallu.com/country.html?c=france): France (Paris · Nice · Lyon) — TLS appointment booking, visa fee from £35, service from £79, paid only after the appointment is confirmed.
+- [Germany](https://schengenmallu.com/country.html?c=germany): Germany (Berlin · Munich) — TLS appointment booking, visa fee from £28, service from £79, paid only after the appointment is confirmed.
+- [Italy](https://schengenmallu.com/country.html?c=italy): Italy (Rome · Venice · Florence) — VFS appointment booking, visa fee from £13, service from £79, paid only after the appointment is confirmed.
+- [Spain](https://schengenmallu.com/country.html?c=spain): Spain (Madrid · Barcelona) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Netherlands](https://schengenmallu.com/country.html?c=netherlands): Netherlands (Amsterdam · Rotterdam) — VFS appointment booking, visa fee from £16, service from £99, paid only after the appointment is confirmed.
+- [Greece](https://schengenmallu.com/country.html?c=greece): Greece (Athens · Santorini) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Switzerland](https://schengenmallu.com/country.html?c=switzerland): Switzerland (Zermatt · Zurich) — VFS appointment booking, visa fee from £20, service from £89, paid only after the appointment is confirmed.
+- [Czechia](https://schengenmallu.com/country.html?c=czechia): Czechia (Prague) — VFS appointment booking, visa fee from £23, service from £79, paid only after the appointment is confirmed.
+- [Austria](https://schengenmallu.com/country.html?c=austria): Austria (Vienna · Salzburg) — VFS appointment booking, visa fee from £29, service from £79, paid only after the appointment is confirmed.
+- [Portugal](https://schengenmallu.com/country.html?c=portugal): Portugal (Lisbon · Porto) — VFS appointment booking, visa fee from £33, service from £79, paid only after the appointment is confirmed.
+- [Belgium](https://schengenmallu.com/country.html?c=belgium): Belgium (Brussels · Bruges) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Denmark](https://schengenmallu.com/country.html?c=denmark): Denmark (Copenhagen) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Estonia](https://schengenmallu.com/country.html?c=estonia): Estonia (Tallinn) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Finland](https://schengenmallu.com/country.html?c=finland): Finland (Helsinki) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Hungary](https://schengenmallu.com/country.html?c=hungary): Hungary (Budapest) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Iceland](https://schengenmallu.com/country.html?c=iceland): Iceland (Reykjavik) — VFS appointment booking, visa fee set by the centre, service from £89, paid only after the appointment is confirmed.
+- [Latvia](https://schengenmallu.com/country.html?c=latvia): Latvia (Riga) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Liechtenstein](https://schengenmallu.com/country.html?c=liechtenstein): Liechtenstein (Vaduz) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Lithuania](https://schengenmallu.com/country.html?c=lithuania): Lithuania (Vilnius) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Luxembourg](https://schengenmallu.com/country.html?c=luxembourg): Luxembourg (Luxembourg City) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Malta](https://schengenmallu.com/country.html?c=malta): Malta (Valletta) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Norway](https://schengenmallu.com/country.html?c=norway): Norway (Oslo · Bergen) — VFS appointment booking, visa fee set by the centre, service from £89, paid only after the appointment is confirmed.
+- [Poland](https://schengenmallu.com/country.html?c=poland): Poland (Warsaw · Kraków) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Romania](https://schengenmallu.com/country.html?c=romania): Romania (Bucharest · Transylvania) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Slovakia](https://schengenmallu.com/country.html?c=slovakia): Slovakia (Bratislava) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Slovenia](https://schengenmallu.com/country.html?c=slovenia): Slovenia (Ljubljana · Bled) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Sweden](https://schengenmallu.com/country.html?c=sweden): Sweden (Stockholm) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Croatia](https://schengenmallu.com/country.html?c=croatia): Croatia (Dubrovnik · Split) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Bulgaria](https://schengenmallu.com/country.html?c=bulgaria): Bulgaria (Sofia · Plovdiv) — VFS appointment booking, visa fee set by the centre, service from £79, paid only after the appointment is confirmed.
+- [Turkey](https://schengenmallu.com/country.html?c=turkey): Turkey (Istanbul · Cappadocia · Coast) — an online e-Visa application, no embassy appointment; fee quoted on WhatsApp, paid only after confirmation.
+- [Dubai & UAE](https://schengenmallu.com/country.html?c=dubai): Dubai & UAE (Dubai · Abu Dhabi · Ras Al Khaimah) — an online visa application, no embassy appointment; fee quoted on WhatsApp, paid only after confirmation.
+
+## Publisher
+Site: https://schengenmallu.com | Contact: hello@schengenmallu.com
+
+## Crawling & usage
+This site welcomes indexing by AI crawlers, LLM training pipelines, RAG systems, and search engines for the purpose of accurately answering questions about Schengen Mallu's services.
