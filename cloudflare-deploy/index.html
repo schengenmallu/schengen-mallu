@@ -247,7 +247,7 @@ nav.full{display:flex;align-items:center;justify-content:space-between;padding-t
 /* Symmetric 5-column timeline grid */
 .j-timeline{position:relative;z-index:2;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;padding:0 clamp(24px,4.5vw,80px) clamp(40px,6vw,64px);}
 @media(max-width:1040px){.j-timeline{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:44px;}}
-@media(max-width:560px){.j-timeline{grid-template-columns:minmax(0,1fr);row-gap:36px;}}
+@media(max-width:560px){.j-timeline{grid-template-columns:minmax(0,1fr);row-gap:30px;}.j-vis{height:280px;}.jv-card{height:280px;}}
 .j-step{display:flex;flex-direction:column;align-items:center;position:relative;padding:0 6px;}
 .j-step:not(:last-child)::after{content:"";position:absolute;top:28px;left:calc(50% + 29px);right:calc(-50% + 29px);height:2px;background:rgba(255,255,255,.13);z-index:0;}
 @media(max-width:1040px){.j-step:not(:last-child)::after{display:none;}}
@@ -559,7 +559,7 @@ nav.full{display:flex;align-items:center;justify-content:space-between;padding-t
 .dest-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-auto-rows:minmax(280px,auto);gap:12px;}
 @media(max-width:1200px){.dest-grid{grid-template-columns:repeat(4,1fr);}}
 @media(max-width:900px){.dest-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:520px){.dest-grid{grid-template-columns:1fr;}}
+@media(max-width:560px){.dest-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:6px;scrollbar-width:none;}.dest-grid::-webkit-scrollbar{display:none;}.dest-grid .dph{flex:0 0 80vw;scroll-snap-align:center;}}
 .dph{position:relative;overflow:hidden;cursor:pointer;border-radius:12px;transition:transform .35s var(--ease),box-shadow .35s;box-shadow:0 20px 50px rgba(13,37,71,.08);transform-style:preserve-3d;}
 .dph:hover{box-shadow:0 40px 90px rgba(13,37,71,.16);}
 /* rotating images inside card */
@@ -626,6 +626,7 @@ nav.full{display:flex;align-items:center;justify-content:space-between;padding-t
 .pack-head p.desc{justify-self:end;max-width:44ch;}@media(max-width:860px){.pack-head p.desc{justify-self:start;}}
 .pack-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;perspective:1600px;align-items:stretch;}
 @media(max-width:1100px){.pack-grid{grid-template-columns:1fr;}}
+@media(max-width:640px){.pack-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;padding-bottom:8px;scrollbar-width:none;}.pack-grid::-webkit-scrollbar{display:none;}.pack-grid .pack{flex:0 0 86vw;scroll-snap-align:center;}}
 .pack{--mx:50%;--my:50%;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.045);backdrop-filter:blur(12px);border-radius:16px;padding:36px 34px 38px;position:relative;transition:transform .5s var(--ease),box-shadow .5s,border-color .4s,background .4s;display:flex;flex-direction:column;box-shadow:0 30px 70px rgba(0,0,0,.28);overflow:hidden;}
 .pack::before{content:"";position:absolute;inset:0;background:radial-gradient(340px circle at var(--mx) var(--my),rgba(143,192,238,.15),transparent 60%);opacity:0;transition:opacity .4s ease;pointer-events:none;border-radius:inherit;z-index:0;}
 .pack:hover::before{opacity:1;}
@@ -862,13 +863,13 @@ footer ul{list-style:none;}footer ul li{margin-bottom:11px;font-size:14px;}foote
 
 <a href="#" id="floatLogo" class="float-logo" style="opacity:0;pointer-events:none;"><img src="assets/schengen-mallu-logo.png" alt="Schengen Mallu"></a>
 <header id="siteHeader"><nav class="full"><a href="#" class="logo" style="display:flex;align-items:center;gap:10px;"><img src="assets/schengen-mallu-logo.png" alt="Schengen Mallu" style="height:60px;width:auto;display:block;"></a>
-<div class="nav-links" id="navLinks"><a href="#how" data-target="how">How it works</a><a href="#dashboard" data-target="dashboard">Dashboard</a><a href="eligibility-checker.html">Eligibility check</a><a href="#destinations" data-target="destinations">Destinations</a><a href="#packages" data-target="packages">Packages</a></div>
+<div class="nav-links" id="navLinks"><a href="#how" data-target="how">How it works</a><a href="#dashboard" data-target="dashboard">Dashboard</a><a href="Eligibility Checker.html">Eligibility check</a><a href="#destinations" data-target="destinations">Destinations</a><a href="#packages" data-target="packages">Packages</a></div>
 <div class="nav-right"><a href="https://track.schengenmallu.com" target="_blank" rel="noopener" class="nav-login-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 12 0v1"/></svg><span>Dashboard Login</span></a><div class="nav-divider"></div><a href="https://wa.me/447352555500?text=Hi%20Schengen%20Mallu%2C%20I%27d%20like%20to%20know%20more%20about%20my%20visa." target="_blank" rel="noopener" class="btn btn-sky btn-hero btn-sm"><span>Start on WhatsApp</span></a><div class="nav-hamburger" id="navHamburger"><span></span></div></div></nav></header>
 <div class="mobile-nav-scrim" id="mobileNavScrim"></div>
 <div class="mobile-nav" id="mobileNav">
   <a href="#how" data-target="how">How it works</a>
   <a href="#dashboard" data-target="dashboard">Dashboard</a>
-  <a href="eligibility-checker.html">Eligibility check</a>
+  <a href="Eligibility Checker.html">Eligibility check</a>
   <a href="#destinations" data-target="destinations">Destinations</a>
   <a href="#packages" data-target="packages">Packages</a>
   <a href="https://track.schengenmallu.com" target="_blank" rel="noopener">Dashboard Login</a>
@@ -889,7 +890,7 @@ footer ul{list-style:none;}footer ul li{margin-bottom:11px;font-size:14px;}foote
   <div class="full hero-inner">
     <h1>Every journey deserves a <span class="grad">confident beginning.</span></h1>
     <p class="hero-sub-text">From securing your appointment to preparing every document, we guide your Schengen journey with clarity, transparency, and complete peace of mind.</p>
-    <div class="hero-ctas"><a href="#" class="btn btn-sky btn-hero" data-lead-form><span>Start your journey</span></a><a href="eligibility-checker.html" class="btn btn-sky"><span>Check my eligibility</span></a></div>
+    <div class="hero-ctas"><a href="#" class="btn btn-sky btn-hero" data-lead-form><span>Start your journey</span></a><a href="Eligibility Checker.html" class="btn btn-sky"><span>Check my eligibility</span></a></div>
     <div class="hero-kick"><div class="rule"></div><span>Schengen visa specialists, United Kingdom</span></div>
   </div>
   <div class="hero-side-info">
@@ -1083,51 +1084,51 @@ footer ul{list-style:none;}footer ul li{margin-bottom:11px;font-size:14px;}foote
 <section class="dest" id="destinations"><div class="full">
   <div class="dest-top"><div class="sec-label">Where we'll take you</div><span style="font-family:'JetBrains Mono';font-size:11px;letter-spacing:.14em;color:var(--s2);text-transform:uppercase;">29 SCHENGEN STATES · HOVER TO EXPLORE</span></div>
   <div class="dest-grid" id="dGrid">
-    <div class="dph" data-imgs="assets/photos/1511739001486-6bfe10ce785f-w800.jpg,assets/photos/1499856871958-5b9627545d1a-w800.jpg,assets/photos/1536098561742-ca998e48cbcc-w800.jpg"><div class="dtag">TLS</div><div class="dbase"><h3>France<em>Paris · Nice · Lyon</em></h3></div><div class="dpanel"><h3>France<em>Paris · Nice · Lyon</em></h3><p class="darticle">Art capitals, coastal escapes, the Alps.</p><ul class="dexplore"><li>Eiffel Tower &amp; Trocadéro</li><li>Louvre &amp; Musée d'Orsay</li><li>Provence lavender</li></ul><div class="dmr"><a href="country.html?c=france" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
+    <div class="dph" data-imgs="assets/photos/1511739001486-6bfe10ce785f-w800.jpg,assets/photos/1499856871958-5b9627545d1a-w800.jpg,assets/photos/1536098561742-ca998e48cbcc-w800.jpg"><div class="dtag">TLS</div><div class="dbase"><h3>France<em>Paris · Nice · Lyon</em></h3></div><div class="dpanel"><h3>France<em>Paris · Nice · Lyon</em></h3><p class="darticle">Art capitals, coastal escapes, the Alps.</p><ul class="dexplore"><li>Eiffel Tower &amp; Trocadéro</li><li>Louvre &amp; Musée d'Orsay</li><li>Provence lavender</li></ul><div class="dmr"><a href="Country.html?c=france" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
 
-    <div class="dph" data-imgs="assets/photos/1467269204594-9661b134dd2b-w800.jpg,assets/photos/1599946347371-68eb71b16afc-w800.jpg,assets/photos/1595867818082-083862f3d630-w800.jpg"><div class="dtag">TLS</div><div class="dbase"><h3>Germany<em>Berlin · Munich</em></h3></div><div class="dpanel"><h3>Germany<em>Berlin · Munich</em></h3><p class="darticle">Culture, castles, and business.</p><ul class="dexplore"><li>Neuschwanstein Castle</li><li>Brandenburg Gate</li><li>Oktoberfest (Sep–Oct)</li></ul><div class="dmr"><a href="country.html?c=germany" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
+    <div class="dph" data-imgs="assets/photos/1467269204594-9661b134dd2b-w800.jpg,assets/photos/1599946347371-68eb71b16afc-w800.jpg,assets/photos/1595867818082-083862f3d630-w800.jpg"><div class="dtag">TLS</div><div class="dbase"><h3>Germany<em>Berlin · Munich</em></h3></div><div class="dpanel"><h3>Germany<em>Berlin · Munich</em></h3><p class="darticle">Culture, castles, and business.</p><ul class="dexplore"><li>Neuschwanstein Castle</li><li>Brandenburg Gate</li><li>Oktoberfest (Sep–Oct)</li></ul><div class="dmr"><a href="Country.html?c=germany" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
 
-    <div class="dph" data-imgs="assets/photos/1552832230-c0197dd311b5-w800.jpg,assets/photos/1534113414509-0eec2bfb493f-w800.jpg,assets/photos/1529260830199-42c24126f198-w800.jpg"><div class="dtag">VFS</div><div class="dbase"><h3>Italy<em>Rome · Venice · Florence</em></h3></div><div class="dpanel"><h3>Italy<em>Rome · Venice · Florence</em></h3><p class="darticle">Ancient Rome, Venetian canals, Tuscan hills.</p><ul class="dexplore"><li>Colosseum &amp; Vatican</li><li>Gondolas, Venice</li><li>Uffizi, Florence</li></ul><div class="dmr"><a href="country.html?c=italy" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
+    <div class="dph" data-imgs="assets/photos/1552832230-c0197dd311b5-w800.jpg,assets/photos/1534113414509-0eec2bfb493f-w800.jpg,assets/photos/1529260830199-42c24126f198-w800.jpg"><div class="dtag">VFS</div><div class="dbase"><h3>Italy<em>Rome · Venice · Florence</em></h3></div><div class="dpanel"><h3>Italy<em>Rome · Venice · Florence</em></h3><p class="darticle">Ancient Rome, Venetian canals, Tuscan hills.</p><ul class="dexplore"><li>Colosseum &amp; Vatican</li><li>Gondolas, Venice</li><li>Uffizi, Florence</li></ul><div class="dmr"><a href="Country.html?c=italy" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
 
-    <div class="dph" data-imgs="assets/photos/1583422409516-2895a77efded-w800.jpg,assets/photos/1509840841025-9088ba78a826-w800.jpg,assets/photos/1558642452-9d2a7deb7f62-w800.jpg"><div class="dtag">VFS</div><div class="dbase"><h3>Spain<em>Madrid · Barcelona</em></h3></div><div class="dpanel"><h3>Spain<em>Madrid · Barcelona</em></h3><p class="darticle">Gaudí, tapas, southern beaches.</p><ul class="dexplore"><li>Sagrada Família</li><li>Prado &amp; Reina Sofía</li><li>Alhambra, Granada</li></ul><div class="dmr"><a href="country.html?c=spain" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
+    <div class="dph" data-imgs="assets/photos/1583422409516-2895a77efded-w800.jpg,assets/photos/1509840841025-9088ba78a826-w800.jpg,assets/photos/1558642452-9d2a7deb7f62-w800.jpg"><div class="dtag">VFS</div><div class="dbase"><h3>Spain<em>Madrid · Barcelona</em></h3></div><div class="dpanel"><h3>Spain<em>Madrid · Barcelona</em></h3><p class="darticle">Gaudí, tapas, southern beaches.</p><ul class="dexplore"><li>Sagrada Família</li><li>Prado &amp; Reina Sofía</li><li>Alhambra, Granada</li></ul><div class="dmr"><a href="Country.html?c=spain" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
 
-    <div class="dph" data-imgs="assets/photos/1534351590666-13e3e96b5017-w800.jpg,assets/photos/1558551649-e44c8f992010-w800.jpg,assets/photos/1512470876302-972faa2aa9a4-w800.jpg"><div class="dtag">VFS</div><div class="dbase"><h3>Netherlands<em>Amsterdam</em></h3></div><div class="dpanel"><h3>Netherlands<em>Amsterdam · Rotterdam</em></h3><p class="darticle">Canals, museums, tulip fields.</p><ul class="dexplore"><li>Van Gogh Museum</li><li>Anne Frank House</li><li>Keukenhof (Mar–May)</li></ul><div class="dmr"><a href="country.html?c=netherlands" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
+    <div class="dph" data-imgs="assets/photos/1534351590666-13e3e96b5017-w800.jpg,assets/photos/1558551649-e44c8f992010-w800.jpg,assets/photos/1512470876302-972faa2aa9a4-w800.jpg"><div class="dtag">VFS</div><div class="dbase"><h3>Netherlands<em>Amsterdam</em></h3></div><div class="dpanel"><h3>Netherlands<em>Amsterdam · Rotterdam</em></h3><p class="darticle">Canals, museums, tulip fields.</p><ul class="dexplore"><li>Van Gogh Museum</li><li>Anne Frank House</li><li>Keukenhof (Mar–May)</li></ul><div class="dmr"><a href="Country.html?c=netherlands" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
 
-    <div class="dph" data-imgs="assets/photos/1613395877344-13d4a8e0d49e-w800.jpg,assets/photos/1555993539-1732b0258235-w800.jpg,assets/photos/1570077188670-e3a8d69ac5ff-w800.jpg"><div class="dtag">VFS</div><div class="dbase"><h3>Greece<em>Athens · Islands</em></h3></div><div class="dpanel"><h3>Greece<em>Athens · Santorini</em></h3><p class="darticle">Ancient ruins, Aegean sunsets.</p><ul class="dexplore"><li>Acropolis &amp; Parthenon</li><li>Santorini caldera</li><li>Mykonos beaches</li></ul><div class="dmr"><a href="country.html?c=greece" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
+    <div class="dph" data-imgs="assets/photos/1613395877344-13d4a8e0d49e-w800.jpg,assets/photos/1555993539-1732b0258235-w800.jpg,assets/photos/1570077188670-e3a8d69ac5ff-w800.jpg"><div class="dtag">VFS</div><div class="dbase"><h3>Greece<em>Athens · Islands</em></h3></div><div class="dpanel"><h3>Greece<em>Athens · Santorini</em></h3><p class="darticle">Ancient ruins, Aegean sunsets.</p><ul class="dexplore"><li>Acropolis &amp; Parthenon</li><li>Santorini caldera</li><li>Mykonos beaches</li></ul><div class="dmr"><a href="Country.html?c=greece" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
 
-    <div class="dph" data-imgs="assets/photos/1531210483974-4f8c1f33fd35-w800.jpg,assets/photos/1551524559-8af4e6624178-w800.jpg,assets/photos/1530122037265-a5f1f91d3b99-w800.jpg"><div class="dtag">VFS</div><div class="dbase"><h3>Switzerland<em>Zermatt · Ski</em></h3></div><div class="dpanel"><h3>Switzerland<em>Zermatt · Zurich</em></h3><p class="darticle">Snow-clad peaks, glacier pistes.</p><ul class="dexplore"><li>Matterhorn skiing</li><li>Glacier Express</li><li>Jungfrau</li></ul><div class="dmr"><a href="country.html?c=switzerland" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
+    <div class="dph" data-imgs="assets/photos/1531210483974-4f8c1f33fd35-w800.jpg,assets/photos/1551524559-8af4e6624178-w800.jpg,assets/photos/1530122037265-a5f1f91d3b99-w800.jpg"><div class="dtag">VFS</div><div class="dbase"><h3>Switzerland<em>Zermatt · Ski</em></h3></div><div class="dpanel"><h3>Switzerland<em>Zermatt · Zurich</em></h3><p class="darticle">Snow-clad peaks, glacier pistes.</p><ul class="dexplore"><li>Matterhorn skiing</li><li>Glacier Express</li><li>Jungfrau</li></ul><div class="dmr"><a href="Country.html?c=switzerland" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
 
-    <div class="dph" data-imgs="assets/photos/1541849546-216549ae216d-w800.jpg,assets/photos/1519677100203-a0e668c92439-w800.jpg,assets/photos/1458150945447-7fb764c11a92-w800.jpg"><div class="dtag">VFS</div><div class="dbase"><h3>Czechia<em>Prague</em></h3></div><div class="dpanel"><h3>Czechia<em>Prague</em></h3><p class="darticle">Europe's best-preserved medieval capital.</p><ul class="dexplore"><li>Prague Castle</li><li>Charles Bridge</li><li>Old Town Square</li></ul><div class="dmr"><a href="country.html?c=czechia" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
+    <div class="dph" data-imgs="assets/photos/1541849546-216549ae216d-w800.jpg,assets/photos/1519677100203-a0e668c92439-w800.jpg,assets/photos/1458150945447-7fb764c11a92-w800.jpg"><div class="dtag">VFS</div><div class="dbase"><h3>Czechia<em>Prague</em></h3></div><div class="dpanel"><h3>Czechia<em>Prague</em></h3><p class="darticle">Europe's best-preserved medieval capital.</p><ul class="dexplore"><li>Prague Castle</li><li>Charles Bridge</li><li>Old Town Square</li></ul><div class="dmr"><a href="Country.html?c=czechia" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
 
-    <div class="dph" data-imgs="assets/photos/1551524559-8af4e6624178-w800.jpg,assets/photos/1530122037265-a5f1f91d3b99-w800.jpg,assets/photos/1516550893923-42d28e5677af-w800.jpg"><div class="dtag">VFS</div><div class="dbase"><h3>Iceland<em>Reykjavik</em></h3></div><div class="dpanel"><h3>Iceland<em>Reykjavik</em></h3><p class="darticle">Glaciers, geysers, and the Northern Lights.</p><ul class="dexplore"><li>Blue Lagoon</li><li>Golden Circle</li><li>Northern Lights</li></ul><div class="dmr"><a href="country.html?c=iceland" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
+    <div class="dph" data-imgs="assets/photos/1551524559-8af4e6624178-w800.jpg,assets/photos/1530122037265-a5f1f91d3b99-w800.jpg,assets/photos/1516550893923-42d28e5677af-w800.jpg"><div class="dtag">VFS</div><div class="dbase"><h3>Iceland<em>Reykjavik</em></h3></div><div class="dpanel"><h3>Iceland<em>Reykjavik</em></h3><p class="darticle">Glaciers, geysers, and the Northern Lights.</p><ul class="dexplore"><li>Blue Lagoon</li><li>Golden Circle</li><li>Northern Lights</li></ul><div class="dmr"><a href="Country.html?c=iceland" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
 
-    <div class="dph" data-imgs="assets/photos/1555881400-74d7acaacd8b-w800.jpg,assets/photos/1580618672591-eb180b1a973f-w800.jpg,assets/photos/1513735492246-483525079686-w800.jpg"><div class="dtag">VFS</div><div class="dbase"><h3>Portugal<em>Lisbon · Porto</em></h3></div><div class="dpanel"><h3>Portugal<em>Lisbon · Porto</em></h3><p class="darticle">Coastal cities, port wine country.</p><ul class="dexplore"><li>Alfama &amp; Tram 28</li><li>Douro Valley</li><li>Sintra palaces</li></ul><div class="dmr"><a href="country.html?c=portugal" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
+    <div class="dph" data-imgs="assets/photos/1555881400-74d7acaacd8b-w800.jpg,assets/photos/1580618672591-eb180b1a973f-w800.jpg,assets/photos/1513735492246-483525079686-w800.jpg"><div class="dtag">VFS</div><div class="dbase"><h3>Portugal<em>Lisbon · Porto</em></h3></div><div class="dpanel"><h3>Portugal<em>Lisbon · Porto</em></h3><p class="darticle">Coastal cities, port wine country.</p><ul class="dexplore"><li>Alfama &amp; Tram 28</li><li>Douro Valley</li><li>Sintra palaces</li></ul><div class="dmr"><a href="Country.html?c=portugal" class="dph-cta">See packages<span class="dph-cta-arrow">→</span></a></div></div></div>
   </div>
   <div class="dest-note" style="margin-bottom:0;">Your passport's next stamp might be one of these nineteen. Scroll on, we've got every Schengen state covered.</div>
 
   <div class="dest-mini-wrap">
     <div class="dest-directory" id="destMiniGrid">
-    <div class="ddx-col"><a href="country.html?c=belgium" class="ddx-row"><span class="ddx-flag">🇧🇪</span><span class="ddx-name"><b>Belgium</b><span>Brussels · Bruges</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=denmark" class="ddx-row"><span class="ddx-flag">🇩🇰</span><span class="ddx-name"><b>Denmark</b><span>Copenhagen</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=estonia" class="ddx-row"><span class="ddx-flag">🇪🇪</span><span class="ddx-name"><b>Estonia</b><span>Tallinn</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=finland" class="ddx-row"><span class="ddx-flag">🇫🇮</span><span class="ddx-name"><b>Finland</b><span>Helsinki</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=hungary" class="ddx-row"><span class="ddx-flag">🇭🇺</span><span class="ddx-name"><b>Hungary</b><span>Budapest</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=iceland" class="ddx-row"><span class="ddx-flag">🇮🇸</span><span class="ddx-name"><b>Iceland</b><span>Reykjavik</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=latvia" class="ddx-row"><span class="ddx-flag">🇱🇻</span><span class="ddx-name"><b>Latvia</b><span>Riga</span></span><span class="ddx-arrow">→</span></a></div>
-    <div class="ddx-col"><a href="country.html?c=liechtenstein" class="ddx-row"><span class="ddx-flag">🇱🇮</span><span class="ddx-name"><b>Liechtenstein</b><span>Vaduz</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=lithuania" class="ddx-row"><span class="ddx-flag">🇱🇹</span><span class="ddx-name"><b>Lithuania</b><span>Vilnius</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=luxembourg" class="ddx-row"><span class="ddx-flag">🇱🇺</span><span class="ddx-name"><b>Luxembourg</b><span>Luxembourg City</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=malta" class="ddx-row"><span class="ddx-flag">🇲🇹</span><span class="ddx-name"><b>Malta</b><span>Valletta</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=norway" class="ddx-row"><span class="ddx-flag">🇳🇴</span><span class="ddx-name"><b>Norway</b><span>Oslo · Bergen</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=poland" class="ddx-row"><span class="ddx-flag">🇵🇱</span><span class="ddx-name"><b>Poland</b><span>Warsaw · Kraków</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=bulgaria" class="ddx-row"><span class="ddx-flag">🇧🇬</span><span class="ddx-name"><b>Bulgaria</b><span>Sofia · Plovdiv</span></span><span class="ddx-arrow">→</span></a></div>
-    <div class="ddx-col"><a href="country.html?c=slovakia" class="ddx-row"><span class="ddx-flag">🇸🇰</span><span class="ddx-name"><b>Slovakia</b><span>Bratislava</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=slovenia" class="ddx-row"><span class="ddx-flag">🇸🇮</span><span class="ddx-name"><b>Slovenia</b><span>Ljubljana · Bled</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=sweden" class="ddx-row"><span class="ddx-flag">🇸🇪</span><span class="ddx-name"><b>Sweden</b><span>Stockholm</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=croatia" class="ddx-row"><span class="ddx-flag">🇭🇷</span><span class="ddx-name"><b>Croatia</b><span>Dubrovnik · Split</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=ireland" class="ddx-row"><span class="ddx-flag">🇮🇪</span><span class="ddx-name"><b>Ireland</b><span>Dublin · Cork</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=turkey" class="ddx-row"><span class="ddx-flag">🇹🇷</span><span class="ddx-name"><b>Turkey</b><span>e-Visa · Istanbul</span></span><span class="ddx-arrow">→</span></a>
-      <a href="country.html?c=dubai" class="ddx-row"><span class="ddx-flag">🇦🇪</span><span class="ddx-name"><b>Dubai & UAE</b><span>Dubai · Abu Dhabi</span></span><span class="ddx-arrow">→</span></a></div>
+    <div class="ddx-col"><a href="Country.html?c=belgium" class="ddx-row"><span class="ddx-flag">🇧🇪</span><span class="ddx-name"><b>Belgium</b><span>Brussels · Bruges</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=denmark" class="ddx-row"><span class="ddx-flag">🇩🇰</span><span class="ddx-name"><b>Denmark</b><span>Copenhagen</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=estonia" class="ddx-row"><span class="ddx-flag">🇪🇪</span><span class="ddx-name"><b>Estonia</b><span>Tallinn</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=finland" class="ddx-row"><span class="ddx-flag">🇫🇮</span><span class="ddx-name"><b>Finland</b><span>Helsinki</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=hungary" class="ddx-row"><span class="ddx-flag">🇭🇺</span><span class="ddx-name"><b>Hungary</b><span>Budapest</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=iceland" class="ddx-row"><span class="ddx-flag">🇮🇸</span><span class="ddx-name"><b>Iceland</b><span>Reykjavik</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=latvia" class="ddx-row"><span class="ddx-flag">🇱🇻</span><span class="ddx-name"><b>Latvia</b><span>Riga</span></span><span class="ddx-arrow">→</span></a></div>
+    <div class="ddx-col"><a href="Country.html?c=liechtenstein" class="ddx-row"><span class="ddx-flag">🇱🇮</span><span class="ddx-name"><b>Liechtenstein</b><span>Vaduz</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=lithuania" class="ddx-row"><span class="ddx-flag">🇱🇹</span><span class="ddx-name"><b>Lithuania</b><span>Vilnius</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=luxembourg" class="ddx-row"><span class="ddx-flag">🇱🇺</span><span class="ddx-name"><b>Luxembourg</b><span>Luxembourg City</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=malta" class="ddx-row"><span class="ddx-flag">🇲🇹</span><span class="ddx-name"><b>Malta</b><span>Valletta</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=norway" class="ddx-row"><span class="ddx-flag">🇳🇴</span><span class="ddx-name"><b>Norway</b><span>Oslo · Bergen</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=poland" class="ddx-row"><span class="ddx-flag">🇵🇱</span><span class="ddx-name"><b>Poland</b><span>Warsaw · Kraków</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=bulgaria" class="ddx-row"><span class="ddx-flag">🇧🇬</span><span class="ddx-name"><b>Bulgaria</b><span>Sofia · Plovdiv</span></span><span class="ddx-arrow">→</span></a></div>
+    <div class="ddx-col"><a href="Country.html?c=slovakia" class="ddx-row"><span class="ddx-flag">🇸🇰</span><span class="ddx-name"><b>Slovakia</b><span>Bratislava</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=slovenia" class="ddx-row"><span class="ddx-flag">🇸🇮</span><span class="ddx-name"><b>Slovenia</b><span>Ljubljana · Bled</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=sweden" class="ddx-row"><span class="ddx-flag">🇸🇪</span><span class="ddx-name"><b>Sweden</b><span>Stockholm</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=croatia" class="ddx-row"><span class="ddx-flag">🇭🇷</span><span class="ddx-name"><b>Croatia</b><span>Dubrovnik · Split</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=ireland" class="ddx-row"><span class="ddx-flag">🇮🇪</span><span class="ddx-name"><b>Ireland</b><span>Dublin · Cork</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=turkey" class="ddx-row"><span class="ddx-flag">🇹🇷</span><span class="ddx-name"><b>Turkey</b><span>e-Visa · Istanbul</span></span><span class="ddx-arrow">→</span></a>
+      <a href="Country.html?c=dubai" class="ddx-row"><span class="ddx-flag">🇦🇪</span><span class="ddx-name"><b>Dubai & UAE</b><span>Dubai · Abu Dhabi</span></span><span class="ddx-arrow">→</span></a></div>
   </div>
   </div>
 
@@ -1145,12 +1146,12 @@ footer ul{list-style:none;}footer ul li{margin-bottom:11px;font-size:14px;}foote
       <div class="dph" style="min-height:260px;" data-imgs="assets/photos/1541432901042-2d8bd64b4a9b-w800.jpg,assets/photos/1524231757912-21f4fe3a7200-w800.jpg,assets/photos/1527838832700-5059252407fa-w800.jpg">
         <div class="dtag" style="background:rgba(195,70,30,.92);color:#fff;">E-VISA</div>
         <div class="dbase"><h3>Turkey<em>Istanbul · Cappadocia · Coast</em></h3></div>
-        <div class="dpanel"><h3>Turkey<em>Istanbul · Cappadocia</em></h3><p class="darticle">Ancient crossroads of East and West. Blue Mosque, hot-air balloons, turquoise bays.</p><ul class="dexplore"><li>Hagia Sophia &amp; Blue Mosque</li><li>Cappadocia hot-air balloons</li><li>Turquoise coast, Bodrum</li></ul><div class="dmr"><span class="dmr-tag">E-Visa · fast turnaround</span><a href="country.html?c=turkey" class="dph-cta">Get a quote<span class="dph-cta-arrow">→</span></a></div></div>
+        <div class="dpanel"><h3>Turkey<em>Istanbul · Cappadocia</em></h3><p class="darticle">Ancient crossroads of East and West. Blue Mosque, hot-air balloons, turquoise bays.</p><ul class="dexplore"><li>Hagia Sophia &amp; Blue Mosque</li><li>Cappadocia hot-air balloons</li><li>Turquoise coast, Bodrum</li></ul><div class="dmr"><span class="dmr-tag">E-Visa · fast turnaround</span><a href="Country.html?c=turkey" class="dph-cta">Get a quote<span class="dph-cta-arrow">→</span></a></div></div>
       </div>
       <div class="dph" style="min-height:260px;" data-imgs="assets/photos/1512453979798-5ea266f8880c-w800.jpg,assets/photos/1518684079-3c830dcef090-w800.jpg,assets/photos/1526495124232-a04e1849168c-w800.jpg">
         <div class="dtag" style="background:rgba(160,110,0,.92);color:#fff;">VISA ON ARRIVAL</div>
         <div class="dbase"><h3>UAE<em>Dubai · Abu Dhabi · Ras Al Khaimah</em></h3></div>
-        <div class="dpanel"><h3>UAE<em>Dubai · Abu Dhabi</em></h3><p class="darticle">Desert modernity, world's tallest towers, gold souk, endless sunshine year-round.</p><ul class="dexplore"><li>Burj Khalifa &amp; Dubai Mall</li><li>Desert safari &amp; dune bashing</li><li>Palm Jumeirah &amp; Atlantis</li></ul><div class="dmr"><span class="dmr-tag">Visa on arrival · UK passports</span><a href="country.html?c=dubai" class="dph-cta">Get a quote<span class="dph-cta-arrow">→</span></a></div></div>
+        <div class="dpanel"><h3>UAE<em>Dubai · Abu Dhabi</em></h3><p class="darticle">Desert modernity, world's tallest towers, gold souk, endless sunshine year-round.</p><ul class="dexplore"><li>Burj Khalifa &amp; Dubai Mall</li><li>Desert safari &amp; dune bashing</li><li>Palm Jumeirah &amp; Atlantis</li></ul><div class="dmr"><span class="dmr-tag">Visa on arrival · UK passports</span><a href="Country.html?c=dubai" class="dph-cta">Get a quote<span class="dph-cta-arrow">→</span></a></div></div>
       </div>
     </div>
 
@@ -1164,26 +1165,12 @@ footer ul{list-style:none;}footer ul li{margin-bottom:11px;font-size:14px;}foote
   <div class="pack-grid">
     <div class="pack tier-basic"><div class="pack-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M12 2c2.5 2.7 4 6.3 4 10s-1.5 7.3-4 10M12 2C9.5 4.7 8 8.3 8 12s1.5 7.3 4 10"/></svg></div><div class="tier-l">Basic</div><h3>Secure my appointment</h3><div class="tgl">You've got the paperwork. You need the slot.</div><div class="pn"><b>From £79</b>Pay only after appointment confirmation</div><ul><li><span class="ck">✓</span>Appointment at nearest VFS / TLS</li><li><span class="ck">✓</span>Document guidance &amp; checklist</li><li><span class="ck">✓</span>Confirmation + calendar invite</li><li><span class="ck">✓</span>Appointment-day reminders</li><li><span class="ck">✓</span>WhatsApp support throughout</li></ul><a href="#" class="btn btn-outline" data-lead-form><span>Start your journey</span></a></div>
     <div class="pack tier-premium"><div class="pack-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="14" rx="2.2"/><path d="M3.5 9.5h17M8 5v-1.5M16 5v-1.5M7.5 13.5h3M7.5 16.2h6"/></svg></div><div class="tier-l">Premium <span class="tag">Most chosen</span></div><h3>Prepare my documents</h3><div class="tgl">You show up. We build everything else.</div><div class="pn"><b>From £129</b>Pay only after appointment confirmation</div><ul><li><span class="ck">✓</span>Everything in Essential, and —</li><li><span class="ck">✓</span>Visa form completed for you</li><li><span class="ck">✓</span>Cover letter written &amp; reviewed</li><li><span class="ck">✓</span>1-year Schengen insurance</li><li><span class="ck">✓</span>Hotel Reservation (Optional for visa purposes only)</li><li><span class="ck">✓</span>Live dashboard access</li></ul><a href="#" class="btn btn-outline" data-lead-form><span>Start your journey</span></a></div>
-    <div class="pack tier-guaranteed"><div class="pack-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l7.5 3v5.6c0 4.8-3.2 8.9-7.5 10.4-4.3-1.5-7.5-5.6-7.5-10.4V5.5l7.5-3z"/><path d="M8.7 12.2l2.2 2.3 4.4-4.7"/></svg></div><div class="tier-l">Guaranteed <span class="tag">Full refund</span></div><h3>Complete my journey</h3><div class="tgl">A promise no one else is willing to make.</div><div class="pn"><b>From £199</b>Pay only after appointment confirmation</div><ul><li><span class="ck">✓</span>Everything in Complete, and —</li><li><span class="ck">✓</span>Full pre-submission audit</li><li><span class="ck">✓</span>Priority handling, every centre</li><li><span class="ck">✓</span>Dedicated senior case lead</li><li><span class="ck">✓</span><b style="color:#4ADE80;font-style:normal;">Package fee refunded if visa refused</b></li></ul><div style="font-size:10.5px;color:#AEC0D9;background:rgba(232,180,77,.1);border:1px solid rgba(232,180,77,.25);border-radius:8px;padding:9px 12px;margin:-6px 0 16px;line-height:1.5;">💛 The VFS/TLS centre fee, embassy visa fee, and insurance premium are paid directly to those third parties, so they sit outside our refund and stay non-refundable.</div><a href="country.html?c=netherlands" class="btn btn-sky btn-hero"><span>Start your journey</span></a></div>
+    <div class="pack tier-guaranteed"><div class="pack-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l7.5 3v5.6c0 4.8-3.2 8.9-7.5 10.4-4.3-1.5-7.5-5.6-7.5-10.4V5.5l7.5-3z"/><path d="M8.7 12.2l2.2 2.3 4.4-4.7"/></svg></div><div class="tier-l">Guaranteed <span class="tag">Full refund</span></div><h3>Complete my journey</h3><div class="tgl">A promise no one else is willing to make.</div><div class="pn"><b>From £199</b>Pay only after appointment confirmation</div><ul><li><span class="ck">✓</span>Everything in Complete, and —</li><li><span class="ck">✓</span>Full pre-submission audit</li><li><span class="ck">✓</span>Priority handling, every centre</li><li><span class="ck">✓</span>Dedicated senior case lead</li><li><span class="ck">✓</span><b style="color:#4ADE80;font-style:normal;">Package fee refunded if visa refused</b></li></ul><div style="font-size:10.5px;color:#AEC0D9;background:rgba(232,180,77,.1);border:1px solid rgba(232,180,77,.25);border-radius:8px;padding:9px 12px;margin:-6px 0 16px;line-height:1.5;">💛 The VFS/TLS centre fee, embassy visa fee, and insurance premium are paid directly to those third parties, so they sit outside our refund and stay non-refundable.</div><a href="Country.html?c=netherlands" class="btn btn-sky btn-hero"><span>Start your journey</span></a></div>
   </div>
   <div class="pack-foot reveal"><span>No slot, <b>no fee</b>, every tier</span><span class="sep"></span><span>Pay only after appointment confirmation</span><span class="sep"></span><span>Quotes within the hour</span></div>
   <div class="group-cta reveal"><span>Booking for a group of 10 or more?</span><a href="#" class="btn btn-outline" data-lead-form-group><span>Enquire about group rates</span></a></div>
 </div></section>
 
-<!-- TEAM, V13 -->
-<section class="sec team"><div class="full mx">
-  <div class="sec-label reveal">The desk</div>
-  <div class="team-grid">
-    <div class="team-copy reveal"><h2>A small team, <span class="grad">obsessed</span> with getting one thing right.</h2><p>Four specialists, an operations manager, relationship manager, account manager, and a founder who signs every guarantee. No call centres, no scripts.</p>
-      <div class="team-stats"><div><b>4</b><span>Specialists</span></div><div><b>1</b><span>WhatsApp thread</span></div><div><b>98.7%</b><span>Success rate</span></div><div><b>1,000+</b><span>Slots secured</span></div></div></div>
-    <div class="team-people reveal">
-      <div class="tp"><div class="tp-placeholder"><span class="tp-initial">B</span><span class="tp-label">Photo of Binil</span></div><div class="info"><h4>Binil</h4><span>Operations Manager</span></div></div>
-      <div class="tp"><div class="tp-placeholder"><span class="tp-initial">S</span><span class="tp-label">Photo of Sandra</span></div><div class="info"><h4>Sandra</h4><span>Relationship Manager</span></div></div>
-      <div class="tp" style="margin-top:22px;"><div class="tp-placeholder"><span class="tp-initial">J</span><span class="tp-label">Photo of Joyce</span></div><div class="info"><h4>Joyce</h4><span>Account Manager</span></div></div>
-      <div class="tp" style="margin-top:22px;"><div class="tp-placeholder"><span class="tp-initial">A</span><span class="tp-label">Photo of Alex</span></div><div class="info"><h4>Alex</h4><span>Founder</span></div></div>
-    </div>
-  </div>
-</div></section>
 
 </div>
 
@@ -1258,7 +1245,7 @@ footer ul{list-style:none;}footer ul li{margin-bottom:11px;font-size:14px;}foote
     <div class="faq-item"><div class="faq-q">What if you can't find me a slot?<span class="plus">+</span></div><div class="faq-a">Full refund. No slot, no fee, every tier.</div></div>
     <div class="faq-item"><div class="faq-q">How does the Guaranteed refund work?<span class="plus">+</span></div><div class="faq-a">If the embassy refuses your visa, we refund in full. Subject to eligibility review. If we don't think it'll be approved, we tell you upfront.</div></div>
     <div class="faq-item"><div class="faq-q">Do I check my application before it's used?<span class="plus">+</span></div><div class="faq-a">Always. Nothing is finalised until you confirm every field is correct.</div></div>
-    <div class="faq-item"><div class="faq-q">What happens to my documents after?<span class="plus">+</span></div><div class="faq-a">Securely deleted 6 months after you share them with us, per our <a href="gdpr-policy.html" style="color:var(--sky);text-decoration:underline;">GDPR Policy</a>. You're notified when it happens.</div></div>
+    <div class="faq-item"><div class="faq-q">What happens to my documents after?<span class="plus">+</span></div><div class="faq-a">Securely deleted 6 months after you share them with us, per our <a href="GDPR Policy.html" style="color:var(--sky);text-decoration:underline;">GDPR Policy</a>. You're notified when it happens.</div></div>
   </div></div>
 </div></section>
 
@@ -1270,9 +1257,9 @@ footer ul{list-style:none;}footer ul li{margin-bottom:11px;font-size:14px;}foote
     <div><h5>Packages</h5><ul><li><a href="#packages">Basic</a></li><li><a href="#packages">Premium</a></li><li><a href="#packages">Guaranteed</a></li></ul></div>
     <div><h5>Platform</h5><ul><li><a href="#how">How it works</a></li><li><a href="#dashboard">Dashboard</a></li><li><a href="#destinations">Destinations</a></li></ul></div>
     <div><h5>Support</h5><ul><li><a href="#faq">FAQ</a></li><li><a href="https://wa.me/447352555500?text=Hi%20Schengen%20Mallu%2C%20I%27d%20like%20to%20know%20more%20about%20my%20visa." target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://www.instagram.com/schengenmallu/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram</a></li><li><a href="https://t.me/SchengenMallu" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>Telegram</a></li></ul></div>
-    <div><h5>Legal</h5><ul><li><a href="privacy-policy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="gdpr-policy.html">GDPR</a></li></ul></div>
+    <div><h5>Legal</h5><ul><li><a href="Privacy Policy.html">Privacy</a></li><li><a href="Terms.html">Terms</a></li><li><a href="GDPR Policy.html">GDPR</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span>© 2026 Schengen Mallu, Merlex Global Ltd</span><span class="footer-contact"><a href="https://wa.me/447352555500?text=Hi%20Schengen%20Mallu%2C%20I%27d%20like%20to%20know%20more%20about%20my%20visa." target="_blank" rel="noopener">+44 7352 555 500</a><span class="fc-sep">·</span><a href="/cdn-cgi/l/email-protection#b6ded3dadad9f6c5d5ded3d8d1d3d8dbd7dadac398d5d9db"><span class="__cf_email__" data-cfemail="b4dcd1d8d8dbf4c7d7dcd1dad3d1dad9d5d8d8c19ad7dbd9">[email&#160;protected]</span></a></span><span>UK-BASED · ICO REGISTERED</span></div>
+  <div class="footer-bottom"><span>© 2026 Schengen Mallu, Merlex Global Ltd</span><span class="footer-contact"><a href="https://wa.me/447352555500?text=Hi%20Schengen%20Mallu%2C%20I%27d%20like%20to%20know%20more%20about%20my%20visa." target="_blank" rel="noopener">+44 7352 555 500</a><span class="fc-sep">·</span><a href="/cdn-cgi/l/email-protection#96fef3fafaf9d6e5f5fef3f8f1f3f8fbf7fafae3b8f5f9fb"><span class="__cf_email__" data-cfemail="026a676e6e6d4271616a676c65676c6f636e6e772c616d6f">[email&#160;protected]</span></a></span><span>UK-BASED · ICO REGISTERED</span></div>
 </div></footer>
 
 <div class="wa-tip" id="waTip">💬 Need help? Chat with us</div>
@@ -1844,11 +1831,8 @@ window.addEventListener('mousemove',e=>{mNX=(e.clientX/window.innerWidth-.5)*2;m
   if(destCards.length){
     gsap.set(destCards,{opacity:0,rotateY:-38,z:-180,transformPerspective:1200,transformOrigin:'center center'});
     ScrollTrigger.batch(destCards,{
-      start:'top 90%',end:'bottom top',
-      onEnter:batch=>gsap.to(batch,{opacity:1,rotateY:0,z:0,duration:1.1,stagger:0.08,ease:'power3.out'}),
-      onLeave:batch=>gsap.set(batch,{opacity:0,rotateY:38,z:-180}),
-      onEnterBack:batch=>gsap.to(batch,{opacity:1,rotateY:0,z:0,duration:.9,stagger:0.06,ease:'power3.out'}),
-      onLeaveBack:batch=>gsap.set(batch,{opacity:0,rotateY:-38,z:-180})
+      start:'top 90%',once:true,
+      onEnter:batch=>gsap.to(batch,{opacity:1,rotateY:0,z:0,duration:1.1,stagger:0.08,ease:'power3.out'})
     });
   }
 
@@ -1863,11 +1847,8 @@ window.addEventListener('mousemove',e=>{mNX=(e.clientX/window.innerWidth-.5)*2;m
       gsap.set(card,{opacity:0,x:offsets[i].x,y:60,rotate:offsets[i].rotate,scale:.9,transformOrigin:'center bottom'});
     });
     ScrollTrigger.create({
-      trigger:packGrid,start:'top 88%',end:'bottom top',
-      onEnter:()=>packCards.forEach((card,i)=>gsap.to(card,{opacity:1,x:0,y:0,rotate:0,scale:1,duration:1,delay:i*0.12,ease:'power3.out'})),
-      onLeave:()=>packCards.forEach((card,i)=>gsap.set(card,{opacity:0,x:offsets[i].x,y:60,rotate:offsets[i].rotate,scale:.9})),
-      onEnterBack:()=>packCards.forEach((card,i)=>gsap.to(card,{opacity:1,x:0,y:0,rotate:0,scale:1,duration:.8,delay:i*0.08,ease:'power3.out'})),
-      onLeaveBack:()=>packCards.forEach((card,i)=>gsap.set(card,{opacity:0,x:offsets[i].x,y:60,rotate:offsets[i].rotate,scale:.9}))
+      trigger:packGrid,start:'top 88%',once:true,
+      onEnter:()=>packCards.forEach((card,i)=>gsap.to(card,{opacity:1,x:0,y:0,rotate:0,scale:1,duration:1,delay:i*0.12,ease:'power3.out'}))
     });
   }
   packCards.forEach(card=>{
@@ -1883,11 +1864,8 @@ window.addEventListener('mousemove',e=>{mNX=(e.clientX/window.innerWidth-.5)*2;m
   if(dashScreen){
     gsap.set(dashScreen,{opacity:0,rotateX:14,scale:.94,transformPerspective:1400,transformOrigin:'top center'});
     ScrollTrigger.create({
-      trigger:dashScreen,start:'top 85%',end:'bottom top',
-      onEnter:()=>gsap.to(dashScreen,{opacity:1,rotateX:0,scale:1,duration:1.2,ease:'power3.out'}),
-      onLeave:()=>gsap.set(dashScreen,{opacity:0,rotateX:14,scale:.94}),
-      onEnterBack:()=>gsap.to(dashScreen,{opacity:1,rotateX:0,scale:1,duration:1,ease:'power3.out'}),
-      onLeaveBack:()=>gsap.set(dashScreen,{opacity:0,rotateX:14,scale:.94})
+      trigger:dashScreen,start:'top 85%',once:true,
+      onEnter:()=>gsap.to(dashScreen,{opacity:1,rotateX:0,scale:1,duration:1.2,ease:'power3.out'})
     });
   }
 
@@ -1896,28 +1874,43 @@ window.addEventListener('mousemove',e=>{mNX=(e.clientX/window.innerWidth-.5)*2;m
   if(teamPhotos.length){
     gsap.set(teamPhotos,{opacity:0,y:50,rotateX:10,transformPerspective:1000});
     ScrollTrigger.batch(teamPhotos,{
-      start:'top 92%',end:'bottom top',
-      onEnter:batch=>gsap.to(batch,{opacity:1,y:0,rotateX:0,duration:.9,stagger:0.1,ease:'power3.out'}),
-      onLeave:batch=>gsap.set(batch,{opacity:0,y:50,rotateX:10}),
-      onEnterBack:batch=>gsap.to(batch,{opacity:1,y:0,rotateX:0,duration:.7,stagger:0.08,ease:'power3.out'}),
-      onLeaveBack:batch=>gsap.set(batch,{opacity:0,y:50,rotateX:10})
+      start:'top 92%',once:true,
+      onEnter:batch=>gsap.to(batch,{opacity:1,y:0,rotateX:0,duration:.9,stagger:0.1,ease:'power3.out'})
     });
   }
 
-  // hero, cinematic parallax exit as you scroll into the page
-  gsap.to('.hero-inner',{y:-110,opacity:.25,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
-  gsap.to('.hero-side-info',{y:-70,opacity:0,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'65% top',scrub:true}});
+  // hero, cinematic parallax exit as you scroll into the page. Plain scroll listener (not a cached
+  // ScrollTrigger scrub) so it always recomputes fresh from live scrollY, never stuck stale.
+  (function(){
+    const heroEl=document.querySelector('.hero');
+    const heroInnerEl=document.querySelector('.hero-inner');
+    const heroSideEl=document.querySelector('.hero-side-info');
+    if(!heroEl||!heroInnerEl)return;
+    function update(){
+      const h=heroEl.offsetHeight||1;
+      const p=Math.min(1,Math.max(0,window.scrollY/h));
+      heroInnerEl.style.transform=`translateY(${-110*p}px)`;
+      heroInnerEl.style.opacity=String(1-p*0.75);
+      if(heroSideEl){
+        const p2=Math.min(1,Math.max(0,window.scrollY/(h*0.65)));
+        heroSideEl.style.transform=`translateY(${-70*p2}px)`;
+        heroSideEl.style.opacity=String(1-p2);
+      }
+    }
+    let ticking=false;
+    window.addEventListener('scroll',()=>{
+      if(!ticking){ticking=true;requestAnimationFrame(()=>{update();ticking=false;});}
+    },{passive:true});
+    update();
+  })();
 
   // final CTA, soft depth-in
   const finalWrap=document.querySelector('.final .wrap');
   if(finalWrap){
     gsap.set(finalWrap,{opacity:0,y:40,rotateX:8,transformPerspective:900});
     ScrollTrigger.create({
-      trigger:finalWrap,start:'top 85%',end:'bottom top',
-      onEnter:()=>gsap.to(finalWrap,{opacity:1,y:0,rotateX:0,duration:1.1,ease:'power3.out'}),
-      onLeave:()=>gsap.set(finalWrap,{opacity:0,y:40,rotateX:8}),
-      onEnterBack:()=>gsap.to(finalWrap,{opacity:1,y:0,rotateX:0,duration:.9,ease:'power3.out'}),
-      onLeaveBack:()=>gsap.set(finalWrap,{opacity:0,y:40,rotateX:8})
+      trigger:finalWrap,start:'top 85%',once:true,
+      onEnter:()=>gsap.to(finalWrap,{opacity:1,y:0,rotateX:0,duration:1.1,ease:'power3.out'})
     });
   }
 
